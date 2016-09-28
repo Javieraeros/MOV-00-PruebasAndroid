@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toast1=Toast.makeText(getApplicationContext(),
                 "Te quedan "+(11-contador)+" clicks", Toast.LENGTH_SHORT);
         toast1.setGravity(Gravity.CENTER,0,0);
-
+        //linea de comentario de prueba para git
         toast1.show();
         if (contador==10){
             imv.setVisibility(View.VISIBLE);
