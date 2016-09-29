@@ -13,10 +13,10 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btn;
-    //TextView tvw;
+    TextView tvw;
     ImageView imv;
     int contador=0;
-    Toast toast1;
+    //Toast toast1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,19 +25,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn=(Button) findViewById(R.id.button);
         btn.setOnClickListener(this);
         imv=(ImageView) findViewById(R.id.imageView);
-        //tvw=(TextView) findViewById(R.id.textoinvisible);
+        tvw=(TextView) findViewById(R.id.texto);
     }
 
     @Override
     public void onClick(View v){
         contador++;
-        toast1=Toast.makeText(getApplicationContext(),
+        /*toast1=Toast.makeText(getApplicationContext(),
                 "Te quedan "+(11-contador)+" clicks", Toast.LENGTH_SHORT);
         toast1.setGravity(Gravity.CENTER,0,0);
         //linea de comentario de prueba para git
-        toast1.show();
+        toast1.show();*/
+        tvw.setText("Te quedan "+(10-contador)+" clicks");
+        tvw.setVisibility(View.VISIBLE);
+
         if (contador==10){
             imv.setVisibility(View.VISIBLE);
+            tvw.setVisibility(View.INVISIBLE);
             contador=0;
         }else{
             if (imv.getVisibility()==View.VISIBLE) {

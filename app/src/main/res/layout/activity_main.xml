@@ -10,27 +10,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="es.iesnervion.fjruiz.myapplication2.MainActivity">
 
-    <Button
-        android:text="Púlsame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="58dp"
-        android:background="#326598"
-        android:id="@+id/button" />
+    <!--android:onClick="mimetodo"
+    también podemos crear un atributo onclick, que nos
+    permite llamar a un método-->
 
-    <!--
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Has clickado bien!!"
-        android:id="@+id/textoinvisible"
-        android:visibility="invisible"
+        android:id="@+id/texto"
+        android:visibility="visible"
         android:layout_above="@+id/button"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="148dp" />
-
+    <!--
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,13 +31,22 @@
         android:id="@+id/texto"/>
     -->
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="500dp"
+        android:layout_height="900dp"
         android:id="@+id/imageView"
-        android:src="@drawable/descarga"
+        android:src="@drawable/negro"
         android:visibility="invisible"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="116dp" />
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/boton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#326598"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
